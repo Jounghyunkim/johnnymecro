@@ -1,0 +1,30 @@
+[package]
+name = "johnny-mecro"
+version = "1.0.0"
+description = "Hybrid web automation: macro recorder + self-healing runner + local Ollama agent"
+authors = ["Johnny"]
+edition = "2021"
+
+[lib]
+name = "johnny_mecro_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+tokio = { version = "1", features = ["full"] }
+tokio-tungstenite = "0.24"
+futures-util = "0.3"
+reqwest = { version = "0.12", default-features = false, features = ["json"] }
+uuid = { version = "1", features = ["v4"] }
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+
+[profile.release]
+codegen-units = 4
+lto = "thin"
+opt-level = 3
+strip = true

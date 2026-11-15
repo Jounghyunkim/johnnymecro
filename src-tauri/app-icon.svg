@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#4338ca"/>
+    </linearGradient>
+  </defs>
+  <!-- rounded tile -->
+  <rect x="48" y="48" width="928" height="928" rx="208" fill="url(#bg)"/>
+  <!-- pointer: "the app clicks for you" -->
+  <path d="M292 204 L292 764 L436 636 L528 842 L628 798 L536 596 L728 596 Z" fill="#ffffff" stroke="#ffffff" stroke-width="28" stroke-linejoin="round"/>
+  <!-- record dot -->
+  <circle cx="742" cy="318" r="104" fill="#ffffff"/>
+  <circle cx="742" cy="318" r="70" fill="#f43f5e"/>
+</svg>
